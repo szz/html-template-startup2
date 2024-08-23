@@ -1,0 +1,15 @@
+---
+layout: default
+
+title: 'Blog'
+
+header:
+    img: '/assets/img/carousel-1.jpg'
+    breadcrumb:
+    - label: 'Blog'
+      url: /blog
+---
+{% block content %}
+    {% include 'components/blog_latest' %}
+    {% include 'components/vendor' %}
+{% endblock %}

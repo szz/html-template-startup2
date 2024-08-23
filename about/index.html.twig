@@ -1,0 +1,16 @@
+---
+layout: default
+
+title: 'About Us'
+
+header:
+    img: '/assets/img/carousel-2.jpg'
+    breadcrumb:
+    - label: 'About'
+      url: /about
+---
+{% block content %}
+    {% include 'components/about_us' %}
+    {% include 'components/team' %}
+    {% include 'components/vendor' %}
+{% endblock %}

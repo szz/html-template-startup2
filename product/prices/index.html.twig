@@ -1,0 +1,18 @@
+---
+layout: default
+
+title: 'Prices'
+
+header:
+    img: '/assets/img/carousel-1.jpg'
+    breadcrumb:
+    - label: 'Product'
+      url: /product
+    - label: 'Prices'
+      url: /product/prices
+---
+{% block content %}
+    {% include 'components/prices' %}
+    {% include 'components/quotes' %}
+    {% include 'components/vendor' %}
+{% endblock %}

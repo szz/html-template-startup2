@@ -1,0 +1,33 @@
+<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        {% for carousel_item in page.carousel %}
+        <div class="carousel-item {{ loop.first ? 'active' }}">
+            <img class="w-100" src="{{ carousel_item.img }}" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 900px;">
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ carousel_item.subheader }}</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ carousel_item.header }}</h1>
+                    {% if carousel_item.accent %}
+                    <a href="{{ carousel_item.accent.url|default('#') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{ carousel_item.accent.label|default('') }}</a>
+                    {% endif %}
+                    {% if carousel_item.normal %}
+                    <a href="{{ carousel_item.normal.url|default('#') }}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">{{ carousel_item.normal.label|default('')}}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if page.carousel|length > 1 %}
+    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    {% endif %}
+</div>

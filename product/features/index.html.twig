@@ -1,0 +1,17 @@
+---
+layout: default
+
+title: 'Features'
+
+header:
+    img: '/assets/img/carousel-1.jpg'
+    breadcrumb:
+    - label: 'Product'
+      url: /product
+    - label: 'Features'
+      url: /product/features
+---
+{% block content %}
+    {% include 'components/features' %}
+    {% include 'components/vendor' %}
+{% endblock %}

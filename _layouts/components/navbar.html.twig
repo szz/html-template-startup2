@@ -1,0 +1,25 @@
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        {% include 'parts/logo' %}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            {% include 'parts/navbar' %}
+            <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+            <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
+        </div>
+    </nav>
+    <div class="container-fluid bg-primary py-5 bg-header" style="background-image: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url('{{ page.header.img }}');">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">{{ page.title|default(site.title) }}</h1>
+                <a href="/" class="h5 text-white">Home</a>
+                {% for breadcrumb_item in page.header.breadcrumb %}
+                    <i class="fa-solid fa-chevron-right text-white px-2"></i>
+                    <a href="{{ breadcrumb_item.url }}" class="h5 text-white">{{ breadcrumb_item.label }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

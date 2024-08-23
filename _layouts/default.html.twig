@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block main_body %}
+    {% include 'components/spinner' %}
+    {% include 'components/topbar' %}
+    {% include 'components/navbar' %}
+    {% include 'components/search_fullscreen' %}{# place after the navbar #}
+
+    {% block content_wrapper %}
+        {% block content %}
+        {% endblock %}
+    {% endblock %}
+
+    {% include 'components/footer' %}
+    {% include 'components/back_to_top' %}
+{% endblock %}

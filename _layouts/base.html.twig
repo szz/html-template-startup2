@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="{{ lang|default(site.lang) }}">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title|default(site.title) }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="{{ page.keywords|default(site.keywords) }}" name="keywords">
+    <meta content="{{ page.description|default(site.description) }}" name="description">
+
+    <link href="/assets/img/favicon.ico" rel="icon">
+
+    {% block styles_pre %}{% endblock %}
+    {% block styles %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css" integrity="sha384-FMDL9OUnWBT1EZ5MuPGa0q7qPuitncGbdYneLfTpwP7wodq8/GoY93lmIqCeW2RZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    {% endblock %}
+
+    {% block styles_post %}{% endblock %}
+    {% block scripts_head %}{% endblock %}
+</head>
+
+<body>
+    {% block main_body %}
+        {% block content_wrapper %}
+            {% block content %}
+            {% endblock %}
+        {% endblock %}
+    {% endblock %}
+
+    {% block scripts_pre %}{% endblock %}
+    {% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/counterup/counterup.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    {% endblock %}
+    {% block scripts_after %}{% endblock %}
+</body>
+
+</html>

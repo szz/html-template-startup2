@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block main_body %}
+    {% include 'components/spinner' %}
+    {% include 'components/topbar' %}
+
+    {% block content_wrapper %}
+        {% include 'components/navbar_w_carousel' %}
+        {% include 'components/search_fullscreen' %}{# place after the navbar #}
+            {% block content %}
+                {% include 'components/facts' %}
+                {% include 'components/about_us' %}
+                {% include 'components/features' %}
+                {% include 'components/services' %}
+                {% include 'components/pricing' %}
+                {% include 'components/quotes' %}
+                {% include 'components/testimonal' %}
+                {% include 'components/team' %}
+                {% include 'components/blog_latest' %}
+                {% include 'components/vendor' %}
+            {% endblock %}
+    {% endblock %}
+
+    {% include 'components/footer' %}
+    {% include 'components/back_to_top' %}
+{% endblock %}

@@ -1,0 +1,17 @@
+---
+layout: default
+
+title: 'Blog Grid'
+
+header:
+    img: '/assets/img/carousel-1.jpg'
+    breadcrumb:
+    - label: 'Blog'
+      url: /blog
+    - label: 'Blog Grid'
+      url: /blog/grid
+---
+{% block content %}
+    {% include 'components/blog_grid' %}
+    {% include 'components/vendor' %}
+{% endblock %}

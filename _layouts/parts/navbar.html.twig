@@ -1,0 +1,22 @@
+<div class="navbar-nav ms-auto py-0">
+    {% set actual_url = page.url|default('') %}
+    {% for menu_item in site.main_menu %}
+        {% set is_main_active = (actual_url starts with menu_item.url) ? ' active' %}
+
+        {% if menu_item.items %}
+            <div class="nav-item dropdown">
+                <a href="{{menu_item.url|default('#')}}" class="nav-item nav-link dropdown-toggle{{ is_main_active }}">{{ menu_item.label }}</a>
+                <div class="dropdown-menu m-0">
+                {% for sub_menu_item in menu_item.items %}
+                    {% set is_sub_active = ( actual_url is same as(sub_menu_item.url) ) ? ' active' %}
+                    <a href="{{ sub_menu_item.url}}" class="dropdown-item{{ is_sub_active }}">{{ sub_menu_item.label}}</a>
+                {% endfor %}
+                </div>
+            </div>
+        {% else %}
+                <a href="{{menu_item.url|default('#')}}" class="nav-item nav-link{{ is_main_active }}">{{ menu_item.label }}</a>
+        {% endif %}
+        {% if menu_item.items %}
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,36 @@
+<div class="container-fluid bg-dark px-5 d-none d-lg-block">
+    <div class="row gx-0">
+        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                {% if site.contact.address %}
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>{{ site.contact.address }}</small>
+                {% endif %}
+                {% if site.contact.email %}
+                    <small class="me-3 text-light"><i class="fa fa-envelope-open me-2"></i>{{ site.contact.email }}</small>
+                {% endif %}
+                {% if site.contact.phone %}
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>{{ site.contact.phone }}</small>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                {% if site.contact.twitter %}
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ site.contact.twitter }}"><i class="fab fa-x-twitter fw-normal"></i></a>
+                {% endif %}
+                {% if site.contact.facebook %}
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ site.contact.facebook }}"><i class="fab fa-facebook-f fw-normal"></i></a>
+                {% endif %}
+                {% if site.contact.linkedin %}
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ site.contact.linkedin }}"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                {% endif %}
+                {% if site.contact.instagram %}
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ site.contact.instagram }}"><i class="fab fa-instagram fw-normal"></i></a>
+                {% endif %}
+                {% if site.contact.instagram %}
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="{{ site.contact.youtube }}"><i class="fab fa-youtube fw-normal"></i></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

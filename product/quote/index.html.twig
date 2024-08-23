@@ -1,0 +1,17 @@
+---
+layout: default
+
+title: 'Free Quote'
+
+header:
+    img: '/assets/img/carousel-1.jpg'
+    breadcrumb:
+    - label: 'Product'
+      url: /product
+    - label: 'Free Quote'
+      url: /product/quote
+---
+{% block content %}
+    {% include 'components/quotes' %}
+    {% include 'components/vendor' %}
+{% endblock %}
